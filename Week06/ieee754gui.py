@@ -94,8 +94,8 @@ class IEEE754GUI:
     def convert(self, _):
         def find_bias(exponent):
             return 2**(exponent-1)-1
-        float_number = float(self.integer.value + "." + self.decimal.value)
-        b = IEEE754(float_number,
+        string_number = (self.integer.value + "." + self.decimal.value)
+        b = IEEE754(string_number,
                     force_length=int(self.length.value),
                     force_exponent=int(self.exponent.value),
                     force_mantissa=int(self.mantissa.value),
